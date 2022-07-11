@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<body>
+	
+	
+	<p:panel style=" width : 300px;">
+		<h1>LOGIN</h1>
+		<h:form id="frmlogin">
+		
+			<p:inputText value="#{loginAction.user}"></p:inputText>
+			<p:inputText value="#{loginAction.pass}"></p:inputText>
+			
+			<p:commandButton value="Conectar" action="#{loginAction.login}"></p:commandButton>
+			
+		</h:form>
+	</p:panel>
+	
+</body>
+
+</html>

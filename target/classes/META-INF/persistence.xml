@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+     <!--        
+   <persistence-unit name="ayto_post" transaction-type="RESOURCE_LOCAL">
+       <provider>org.hibernate.ejb.HibernatePersistence</provider> 
+      <provider>org.hibernate.jpa.HibernatePersistenceProvide</provider>  
+      <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>  
+      <jta-data-source>java:comp/env/ayto_post</jta-data-source>
+      
+      <properties>
+      	<property name="hibernate.dialect"	value="org.hibernate.dialect.PostgreSQLDialect" />
+		<property name="hibernate.hbm2ddl.auto" value="update" />
+		<property name="hibernate.show_sql" value="false" />						
+        <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>
+      </properties>
+   </persistence-unit> --> 
+   
+   <persistence-unit name="openadmin" transaction-type="JTA">
+      <jta-data-source>java:/jboss/datasources/openadmin</jta-data-source>
+      
+      <class>openadmin.model.Access</class>
+      <class>openadmin.model.Action</class>
+      <class>openadmin.model.ActionViewRole</class>
+      <class>openadmin.model.FieldsView</class>
+      <class>openadmin.model.MenuItem</class>
+      <class>openadmin.model.Program</class>
+      <class>openadmin.model.NameClass</class>
+      <class>openadmin.model.Role</class>
+      <class>openadmin.model.User</class>
+      <class>openadmin.model.EntityAdm</class>
+      <class>openadmin.model.CustomViewAtributte</class>
+      <class>openadmin.model.Component</class>
+      
+<!--       Cementeri -->
+      <class>openadmin.model.cementeri.Bloc</class>
+      <class>openadmin.model.cementeri.Columna</class>
+      <class>openadmin.model.cementeri.Departament</class>
+      <class>openadmin.model.cementeri.Difunt</class>
+      <class>openadmin.model.cementeri.Fila</class>
+      <class>openadmin.model.cementeri.TipoBloc</class>
+      <class>openadmin.model.cementeri.Zona</class>
+      
+      <class>openadmin.model.cars.Car</class>
+      <class>openadmin.model.cars.Repair</class>
+
+
+      
+      <properties>
+      	<property name="hibernate.dialect"	value="org.hibernate.dialect.PostgreSQLDialect" />
+		<property name="hibernate.hbm2ddl.auto" value="update" />
+		<property name="hibernate.show_sql" value="false" />				  
+       <!--  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/> -->
+      </properties>
+   </persistence-unit>
+   <persistence-unit name="log_post" transaction-type="JTA">
+      <jta-data-source>java:/jboss/datasources/log_post</jta-data-source>
+      
+      <class>openDao.model.log.Log</class>
+      
+      <properties>
+      	<property name="hibernate.dialect"	value="org.hibernate.dialect.PostgreSQLDialect" />
+		<property name="hibernate.hbm2ddl.auto" value="update" />
+		<property name="hibernate.show_sql" value="false" />				  
+       <!--  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/> -->
+      </properties>
+   </persistence-unit>
+     <!--
+   <persistence-unit name="control_post" transaction-type="RESOURCE_LOCAL">
+     <provider>org.hibernate.ejb.HibernatePersistence</provider>
+      <jta-data-source>java:comp/env/control_post</jta-data-source>
+      <properties>
+      	<property name="hibernate.dialect"	value="org.hibernate.dialect.PostgreSQLDialect" />
+		<property name="hibernate.hbm2ddl.auto" value="update" />
+		<property name="hibernate.show_sql" value="false" />				  
+        <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>
+      </properties>
+   </persistence-unit> -->
+	
+</persistence>

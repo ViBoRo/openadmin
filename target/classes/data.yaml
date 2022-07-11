@@ -1,0 +1,273 @@
+#--------------------------------------USERS--------------------------------------
+
+users:
+   - description: "viborro"
+     fullName: "Borja Roca Vicent"
+     language: "es"
+     identifier: "ESANVUOS21"
+     password: "11233"
+     dateBegin: "2012-03-29"
+     dateEnd: "2012-03-29"
+     active: true
+     tercer: false
+     signature: false
+     
+   - description: "paborro"
+     fullName: "Borja Roca Pau"
+     language: "en"
+     identifier: "YIQWVDG7073"
+     password: "11233"
+     dateBegin: "2012-03-29"
+     dateEnd: "2012-03-29"
+     active: true
+     tercer: true
+     signature: true
+     
+   - description: "anmarpe"
+     fullName: "Peng Ana Maria"
+     language: "en"
+     identifier: "YIQWVDG7073"
+     password: "11233"
+     dateBegin: "2012-03-29"
+     dateEnd: "2012-03-29"
+     active: true
+     tercer: true
+     signature: true
+     
+   - description: "admin"
+     fullName: "Admin Admin Admin"
+     language: "es"
+     identifier: "YIQWVDG7073"
+     password: "hola132"
+     dateBegin: "2012-03-29"
+     dateEnd: "2012-03-29"
+     active: true
+     tercer: true
+     signature: true
+     
+   - description: "juaalol"
+     fullName: "Alberola Oltra Juan Miguel"
+     language: "en"
+     identifier: "YIQWVDG707aa3a"
+     password: "3124141"
+     dateBegin: "2012-03-29"
+     dateEnd: "2012-03-29"
+     active: true
+     tercer: true
+     signature: true
+     
+     
+#--------------------------------------PROGRAMS--------------------------------------
+
+programs:
+   - description: "autoliquidacion"
+     icon: "/aa/aaaaa/ssaaa.png"
+     
+   - description: "multas"
+     icon: "/wdcs/wfcwddsa/qsaaaa.png"
+     
+   - description: "all"
+     icon: "/wdcs/wfcwddsa/qsaaaasssa.png"
+
+
+#--------------------------------------ROLES--------------------------------------
+
+roles:
+ - description: "admin_autoliquidacion"
+   program: "autoliquidacion"
+
+ - description: "consult_autoliquidacion"
+   program: "autoliquidacion"   
+     
+ - description: "admin_multas"
+   program: "multas"   
+   
+ - description: "consult_multas"
+   program: "multas"
+      
+ - description: "admin"
+   program: "all"
+     
+      
+#--------------------------------------ENTITYADMINS--------------------------------------
+
+entityadmins:
+ - description: "log_post"
+   code: 13424
+   icon: "/aa/aaaaa/ssaaa.png"
+   conn: "postgres"
+
+#--------------------------------------ACCESS--------------------------------------
+
+access:
+ - description: "a01"
+   user: "viborro"
+   entityadm: "log_post"
+   role: "admin_autoliquidacion"
+   program: "autoliquidacion"
+   
+ - description: "a02"
+   user: "paborro"
+   entityadm: "log_post"
+   role: "consult_multas"
+   program: "multas"
+   
+ - description: "a03"
+   user: "juaalol"
+   entityadm: "log_post"
+   role: "admin_multas"
+   program: "multas"
+   
+ - description: "a04"
+   user: "admin"
+   entityadm: "log_post"
+   role: "admin"
+   program: "all"
+   
+ - description: "a04"
+   user: "admin"
+   entityadm: "log_post"
+   role: "admin_multas"
+   program: "multas"
+   
+#--------------------------------------ACTIONS--------------------------------------
+
+actions:
+  - description: "openadmin_model_plusvalias_adm_default"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.Access"
+  
+  - description: "openadmin_model_bienesurbanos_adm_default"
+    groupid: 2
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass: 
+      description: "openadmin.model.User"
+
+#--------------------------------------MENUITEMS--------------------------------------
+
+menuitems:
+  - description: "New"
+    itemorder: 12
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "p"
+    viewCode: "a"
+    parent: null
+     
+  - description: "calcul"
+    itemorder: 19
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "b"
+    parent: "New"
+    
+  - description: "Edit"
+    itemorder: 13
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "p"
+    viewCode: "c"
+    parent: null
+    
+  - description: "Delete"
+    itemorder: 17
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "d"
+    parent: "Edit"
+   
+  - description: "Hola"
+    itemorder: 17
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "p"
+    viewCode: "d"
+    parent: "Edit"
+    
+  - description: "Crear"
+    itemorder: 17
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "d"
+    parent: "Hola"
+
+  - description: "Search"
+    itemorder: 18
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "e"
+    parent: null
+    
+#--------------------------------------ACTIONVIEWROLES--------------------------------------
+
+actionviewroles:
+   - description: "Admin0"
+     role: "admin_multas"
+     menuitem: "Edit"
+     action: "openadmin_model_plusvalias_adm_default"
+#------------------
+   - description: "Admin1"
+     role: "admin_multas"
+     menuitem: "Search"
+     action: "openadmin_model_plusvalias_adm_default"
+     
+   - description: "Admin2"
+     role: "admin_multas"
+     menuitem: "Search"
+     action: "openadmin_model_bienesurbanos_adm_default"
+#------------------
+   - description: "Admin3"
+     role: "admin_multas"
+     menuitem: "Delete"
+     action: "openadmin_model_plusvalias_adm_default"
+
+   - description: "Admin4"
+     role: "admin"
+     menuitem: "Edit"
+     action: "openadmin_model_bienesurbanos_adm_default"
+     
+   - description: "Admin5"
+     role: "admin"
+     menuitem: "Edit"
+     action: "openadmin_model_bienesurbanos_adm_default"
+     
+   - description: "Admin6"
+     role: "admin_multas"
+     menuitem: "Crear"
+     action: "openadmin_model_plusvalias_adm_default"
+     
+   - description: "Admin7"
+     role: "admin_multas"
+     menuitem: "Hola"
+     action: "openadmin_model_plusvalias_adm_default"
+     
+   - description: "User1"
+     role: "consult_multas"
+     menuitem: "Search"
+     action: "openadmin_model_bienesurbanos_adm_default"
+
+#--------------------------------------CUSTOMVIEWATRIBUTTES--------------------------------------
+
+customviewatributtes:
+  - description: "FormulariCustom1"
+    nomAtributo: "CaixaColor"
+    nivel: "lvl2"
+    readOnly: false
+    longitud: 2
+    color: "FFF"
+    pantalla: "pantalla4"
+    accio: "Search"
+    menuitem:
+      description: "Search22"
+      itemorder: 18
+      icon: "/wdcs/wfcwddsa/aasx.png"
+      viewType: "Vertical"
+      typenode: a
+      menuitem: null
+ 

@@ -1,0 +1,48 @@
+<ui:composition 	xmlns="http://www.w3.org/1999/xhtml"
+ 					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:h="http://xmlns.jcp.org/jsf/html"
+     				 xmlns:p="http://primefaces.org/ui"
+ 					xmlns:ui="http://java.sun.com/jsf/facelets"
+					template="layout.xhtml">
+
+		<ui:define name="header">
+			
+			<p:panelGrid columns="3" layout="grid" styleClass="showcase-text-align-center">
+
+				<p:outputLabel id="identity" value="#{msg.entity}"/>
+							
+				<p:outputLabel id="iduser" value="#{msg.user} #{ctx.username}" />								
+				
+				<p:outputPanel id="idprogram" ajaxRendered="true">
+							
+						<h:outputText binding="#{main.program}" />
+				
+				</p:outputPanel>
+				
+			</p:panelGrid>
+			
+		</ui:define>
+
+		<ui:define name="toolbar">
+			 				 	
+			 	<p:menubar model="#{main.toolbarModel}" />
+
+		</ui:define>
+		
+		<ui:define name="menu">
+		
+				<p:outputPanel id="idmenu" ajaxRendered="true">
+		 		
+				        <p:menu toggleable="true" model="#{main.panelModel}"/>
+			
+		 		</p:outputPanel>
+		
+		</ui:define>
+		
+		<ui:define name="view">	 		
+		 		
+		 		<p:outputPanel id="idview" ajaxRendered="true"></p:outputPanel>
+		 		 	
+		</ui:define>
+		
+</ui:composition>

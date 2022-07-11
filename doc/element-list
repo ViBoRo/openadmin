@@ -1,0 +1,17 @@
+openadmin.action.cementeri
+openadmin.model
+openadmin.model.cementeri
+openadmin.util.data
+openadmin.util.validator
+openadmin.widgets.jsf
+openadmin.widgets.jsf.component
+openadmin.widgets.jsf.view
+openDao.action
+openDao.annotation
+openDao.connection
+openDao.exception
+openDao.model
+openDao.model.log
+openDao.operation
+openDao.util.cipher
+openDao.util.messages

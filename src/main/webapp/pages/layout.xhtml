@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+ 		xmlns:h="http://xmlns.jcp.org/jsf/html"
+      	xmlns:p="http://primefaces.org/ui"
+ 		xmlns:f="http://java.sun.com/jsf/core"
+ 		xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:loadBundle basename="messagesMain_es" var="msg" />
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- 	<link href="../resources/css/theme1.css" rel="stylesheet" type="text/css" /> -->
+	<title>Layout</title>
+	<script type="text/javascript" src="../resources/text/es.js"></script>	
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+		
+</h:head>
+
+<h:body>
+	
+	<div id = "idheader">
+    	<ui:insert name="header"/> 	
+	</div>
+	
+	<h:form id="idform">
+	
+		<p:outputPanel id="idtoolbar" deferred="true">
+	
+			<ui:insert name="toolbar"/>
+	
+		</p:outputPanel>
+	
+	 	<h:panelGrid id="idmainmenuview" columns="2" columnClasses="top" rowClasses="rowTop">
+	
+			<ui:insert name="menu"/>
+			<ui:insert name="view"/> 	
+	
+		</h:panelGrid>
+	
+	</h:form>
+	
+	<h:form id="idform1">
+		
+	    	<div class="card">
+			    <p:gmap center="39.177338, -0.258423" zoom="15" type="HYBRID" style="width:400px;height:400px"/>
+			</div>
+		
+	</h:form>
+	
+</h:body>
+</html>

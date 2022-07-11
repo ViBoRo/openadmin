@@ -1,0 +1,692 @@
+#--------------------------------------USERS--------------------------------------
+
+users:
+     
+   - description: "admin"
+     fullName: "Admin Admin Admin"
+     language: "es"
+     identifier: "YIQWVDG7073"
+     password: "hola132"
+     dateBegin: "2012-03-29"
+     dateEnd: "2022-02-22"
+     active: true
+     entityDefault: "openadmin"
+     tercer: true
+     signature: true
+     
+   - description: "Anate65"
+     fullName: "Ana Teresa Martinez"
+     language: "es"
+     identifier: "NAS28ASJ2S0"
+     password: "normalpassword"
+     dateBegin: "2021-03-30"
+     dateEnd: "2022-03-29"
+     active: true
+     entityDefault: "openadmin"
+     tercer: true
+     signature: true
+     
+#--------------------------------------PROGRAMS--------------------------------------
+
+programs:
+
+   - description: "cars"
+     icon: ""
+
+   - description: "cementeri"
+     icon: ""
+
+#--------------------------------------ROLES--------------------------------------
+
+roles:
+
+ - description: "gestor_cars"
+   program: "cars"
+
+ - description: "admin_cementeri"
+   program: "cementeri"
+
+ - description: "gestor_cementeri"
+   program: "cementeri"
+   
+ - description: "consultor_cementeri"
+   program: "cementeri"
+     
+      
+#--------------------------------------ENTITYADMINS--------------------------------------
+
+entityadmins:
+ - description: "log_post"
+   code: 13424
+   icon: "/aa/aaaaa/ssaaa.png"
+   conn: "postgres"
+   
+ - description: "openadmin"
+   code: 13425
+   icon: "/aa/aaaaa/ssaaa.png"
+   conn: "postgres"
+
+#--------------------------------------ACCESS--------------------------------------
+
+access:
+
+ - description: "a04"
+   user: "admin"
+   entityadm: "openadmin"
+   role: "admin_cementeri"
+   program: "cementeri"
+   
+ - description: "a04"
+   user: "Anate65"
+   entityadm: "openadmin"
+   role: "gestor_cars"
+   program: "cars"
+  
+   
+#--------------------------------------ACTIONS--------------------------------------
+
+actions:
+
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Car"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Car"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Car"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Car"
+
+
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Repair"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Repair"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Repair"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Repair"
+      
+  - description: ":discount"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cars.Repair"
+
+
+
+#---------------------CEMENTERI-----------------------------
+
+#-----ZONA
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Zona"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Zona"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Zona"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Zona"
+      
+  - description: ":ubication"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Zona"
+      
+#-----BLOC
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Bloc"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Bloc"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Bloc"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Bloc"
+      
+  - description: ":ubication"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Bloc"
+      
+#-----TIPOBLOC
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.TipoBloc"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.TipoBloc"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.TipoBloc"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcswfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.TipoBloc"
+      
+#-----DEPARTAMENT
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Departament"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Departament"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Departament"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Departament"
+
+  - description: ":ubication"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Departament"
+
+#-----COLUMNA
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Columna"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Columna"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Columna"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Columna"
+
+  - description: ":ubication"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Columna"
+      
+#-----FILA
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Fila"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Fila"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Fila"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Fila"
+      
+  - description: ":ubication"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Fila"
+      
+#-----DIFUNT
+  - description: "new"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Difunt"
+      
+  - description: "edit"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Difunt"
+      
+  - description: "delete"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Difunt"
+      
+  - description: "search"
+    groupid: 0
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Difunt"
+      
+  - description: ":ubication"
+    groupid: 1
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    nameclass:
+      description: "openadmin.model.cementeri.Difunt"
+
+  
+  
+
+#--------------------------------------MENUITEMS--------------------------------------
+
+menuitems:
+
+  - description: "Car"
+    itemorder: 1
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: null
+
+  - description: "Repair"
+    itemorder: 12
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: null
+
+
+
+###########Cementeri###########
+  - description: "Localizacion"
+    itemorder: 1
+    icon: "/wdcs/wfcwddsa/aasx.png"
+    viewType: "default"
+    typenode: "p"
+    viewCode: "c"
+    parent: null
+
+  - description: "Zona"
+    itemorder: 12
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: "Localizacion"
+    
+  - description: "Bloc"
+    itemorder: 3
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: "Localizacion"
+    
+  - description: "TipoBloc"
+    itemorder: 4
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: "Localizacion"
+
+  - description: "Columna"
+    itemorder: 5
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: "Localizacion"
+    
+  - description: "Fila"
+    itemorder: 6
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: "Localizacion"
+    
+  - description: "Departament"
+    itemorder: 7
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: "Localizacion"
+    
+  - description: "Difunto"
+    itemorder: 7
+    icon: "/wdcs/wfcwddsa/qsaaaa.png"
+    viewType: "default"
+    typenode: "c"
+    viewCode: "a"
+    parent: null
+    
+
+    
+    
+#--------------------------------------ACTIONVIEWROLES--------------------------------------
+
+actionviewroles:
+
+
+
+   - description: "50"
+     role: "gestor_cars"
+     menuitem: "Car"
+     action: "openadmin.model.cars.Car_new"
+     
+   - description: "51"
+     role: "gestor_cars"
+     menuitem: "Car"
+     action: "openadmin.model.cars.Car_edit"
+     
+   - description: "52"
+     role: "gestor_cars"
+     menuitem: "Car"
+     action: "openadmin.model.cars.Car_delete"
+     
+   - description: "53"
+     role: "gestor_cars"
+     menuitem: "Car"
+     action: "openadmin.model.cars.Car_search"
+     
+     
+   - description: "57"
+     role: "gestor_cars"
+     menuitem: "Repair"
+     action: "openadmin.model.cars.Repair_search"
+     
+   - description: "58"
+     role: "gestor_cars"
+     menuitem: "Repair"
+     action: "openadmin.model.cars.Repair_:discount"
+
+
+#------ADMINCEMENTERI
+   - description: "1"
+     role: "admin_cementeri"
+     menuitem: "Localizacion"
+     action: "openadmin.model.cementeri.Zona_new"
+     
+   - description: "2"
+     role: "admin_cementeri"
+     menuitem: "Zona"
+     action: "openadmin.model.cementeri.Zona_new"
+     
+   - description: "3"
+     role: "admin_cementeri"
+     menuitem: "Zona"
+     action: "openadmin.model.cementeri.Zona_edit"
+     
+   - description: "4"
+     role: "admin_cementeri"
+     menuitem: "Zona"
+     action: "openadmin.model.cementeri.Zona_delete"
+     
+   - description: "5"
+     role: "admin_cementeri"
+     menuitem: "Zona"
+     action: "openadmin.model.cementeri.Zona_search"
+     
+   - description: "55"
+     role: "admin_cementeri"
+     menuitem: "Zona"
+     action: "openadmin.model.cementeri.Zona_:ubication"
+     
+     
+   - description: "6"
+     role: "admin_cementeri"
+     menuitem: "Bloc"
+     action: "openadmin.model.cementeri.Bloc_new"
+     
+   - description: "7"
+     role: "admin_cementeri"
+     menuitem: "Bloc"
+     action: "openadmin.model.cementeri.Bloc_edit"
+     
+   - description: "8"
+     role: "admin_cementeri"
+     menuitem: "Bloc"
+     action: "openadmin.model.cementeri.Bloc_delete"
+     
+   - description: "9"
+     role: "admin_cementeri"
+     menuitem: "Bloc"
+     action: "openadmin.model.cementeri.Bloc_search"
+     
+   - description: "56"
+     role: "admin_cementeri"
+     menuitem: "Bloc"
+     action: "openadmin.model.cementeri.Bloc_:ubication"
+     
+     
+   - description: "10"
+     role: "admin_cementeri"
+     menuitem: "Columna"
+     action: "openadmin.model.cementeri.Columna_new"
+     
+   - description: "11"
+     role: "admin_cementeri"
+     menuitem: "Columna"
+     action: "openadmin.model.cementeri.Columna_edit"
+     
+   - description: "12"
+     role: "admin_cementeri"
+     menuitem: "Columna"
+     action: "openadmin.model.cementeri.Columna_delete"
+     
+   - description: "13"
+     role: "admin_cementeri"
+     menuitem: "Columna"
+     action: "openadmin.model.cementeri.Columna_search"
+     
+   - description: "57"
+     role: "admin_cementeri"
+     menuitem: "Columna"
+     action: "openadmin.model.cementeri.Columna_:ubication"
+     
+     
+     
+   - description: "15"
+     role: "admin_cementeri"
+     menuitem: "Departament"
+     action: "openadmin.model.cementeri.Departament_new"
+     
+   - description: "16"
+     role: "admin_cementeri"
+     menuitem: "Departament"
+     action: "openadmin.model.cementeri.Departament_edit"
+     
+   - description: "17"
+     role: "admin_cementeri"
+     menuitem: "Departament"
+     action: "openadmin.model.cementeri.Departament_delete"
+     
+   - description: "18"
+     role: "admin_cementeri"
+     menuitem: "Departament"
+     action: "openadmin.model.cementeri.Departament_search"
+     
+   - description: "58"
+     role: "admin_cementeri"
+     menuitem: "Departament"
+     action: "openadmin.model.cementeri.Departament_:ubication"
+   
+   - description: "19"
+     role: "admin_cementeri"
+     menuitem: "Difunto"
+     action: "openadmin.model.cementeri.Difunt_new"
+     
+   - description: "20"
+     role: "admin_cementeri"
+     menuitem: "Difunto"
+     action: "openadmin.model.cementeri.Difunt_edit"
+     
+   - description: "21"
+     role: "admin_cementeri"
+     menuitem: "Difunto"
+     action: "openadmin.model.cementeri.Difunt_delete"
+     
+   - description: "22"
+     role: "admin_cementeri"
+     menuitem: "Difunto"
+     action: "openadmin.model.cementeri.Difunt_search"
+    
+   - description: "59"
+     role: "admin_cementeri"
+     menuitem: "Difunto"
+     action: "openadmin.model.cementeri.Difunt_:ubication"
+     
+     
+   - description: "23"
+     role: "admin_cementeri"
+     menuitem: "Fila"
+     action: "openadmin.model.cementeri.Fila_new"
+     
+   - description: "24"
+     role: "admin_cementeri"
+     menuitem: "Fila"
+     action: "openadmin.model.cementeri.Fila_edit"
+     
+   - description: "25"
+     role: "admin_cementeri"
+     menuitem: "Fila"
+     action: "openadmin.model.cementeri.Fila_delete"
+     
+   - description: "26"
+     role: "admin_cementeri"
+     menuitem: "Fila"
+     action: "openadmin.model.cementeri.Fila_search"
+     
+   - description: "60"
+     role: "admin_cementeri"
+     menuitem: "Fila"
+     action: "openadmin.model.cementeri.Fila_:ubication"
+     
+     
+     
+   - description: "27"
+     role: "admin_cementeri"
+     menuitem: "TipoBloc"
+     action: "openadmin.model.cementeri.TipoBloc_new"
+     
+   - description: "28"
+     role: "admin_cementeri"
+     menuitem: "TipoBloc"
+     action: "openadmin.model.cementeri.TipoBloc_edit"
+
+   - description: "29"
+     role: "admin_cementeri"
+     menuitem: "TipoBloc"
+     action: "openadmin.model.cementeri.TipoBloc_delete"
+     
+   - description: "30"
+     role: "admin_cementeri"
+     menuitem: "TipoBloc"
+     action: "openadmin.model.cementeri.TipoBloc_search"
+
+
+#--------------------------------------CUSTOMVIEWATRIBUTTES--------------------------------------
+
+customviewatributtes:
+  - description: "FormulariCustom1"
+    nomAtributo: "CaixaColor"
+    nivel: "lvl2"
+    readOnly: false
+    longitud: 2
+    color: "FFF"
+    pantalla: "pantalla4"
+    accio: "openadmin.model.cementeri.TipoBloc_delete"
+    menuitem:
+      description: "Search22"
+      itemorder: 18
+      icon: "/wdcs/wfcwddsa/aasx.png"
+      viewType: "Vertical"
+      typenode: a
+      menuitem: null
